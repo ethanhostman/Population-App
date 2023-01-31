@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>{{city}}</td>
+    <td>{{state}}</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Zip Code</th>
+    <th>Population</th>
+  </tr>
+  {{#each response.data}}
+    <tr>
+      <td><a href="http://localhost:3000/zip?id={{this.zip}}">{{this.zip}}</a></td>
+      <td>{{this.pop}}</td>
+    </tr>
+  {{/each}}
+</table>
